@@ -1,3 +1,3 @@
-import home from './home';
+import page from './firstLoad';
 
-home.init();
+page.load();
