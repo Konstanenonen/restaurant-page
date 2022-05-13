@@ -6,9 +6,12 @@ const page = (() => {
     const main = document.createElement("main");
     const footer = document.createElement("footer");
     const title = document.createElement("h1");
+    const description = document.createElement("p");
 
-    title.innerHTML = "Restaraunt Page";
+    title.innerText = "Classic Burgers";
+    description.innerText = "This is the place to visit when you want some good ass burgers!"
     main.appendChild(title);
+    main.appendChild(description);
 
     return [
       navigation,
