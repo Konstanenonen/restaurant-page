@@ -9,15 +9,19 @@ const page = (() => {
 
     const homeLink = document.createElement("button");
     homeLink.classList.add("navigation-button");
+    homeLink.id = "home-button";
 
     const menuLink = document.createElement("button");
     menuLink.classList.add("navigation-button");
+    menuLink.id = "menu-button";
 
     const contactLink = document.createElement("button");
     contactLink.classList.add("navigation-button");
+    contactLink.id = "contact-button";
 
     const main = document.createElement("main");
     main.classList.add("main");
+    main.id = "main";
 
     const footer = document.createElement("footer");
     footer.classList.add("footer");
