@@ -24,8 +24,7 @@ const menu = (() => {
   const load = () => {
     const root = _getRoot();
     root.innerHTML = "";
-    const content = _createMenuContent();
-    root.appendChild(content);
+    root.appendChild(_createMenuContent());
   };
 
   return {

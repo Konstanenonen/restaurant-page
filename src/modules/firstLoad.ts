@@ -1,4 +1,4 @@
-import Burger from "../images/burger.jpg";
+import home from "./home";
 
 const page = (() => {
   const _root = document.getElementById("content");
@@ -29,27 +29,13 @@ const page = (() => {
     const title = document.createElement("h1");
     title.classList.add("title");
 
-    const description = document.createElement("p");
-    description.classList.add("description");
-
-    const burgerPicture = new Image();
-    burgerPicture.classList.add("header-image");
-
     homeLink.innerText = "Home";
     menuLink.innerText = "Menu";
     contactLink.innerText = "Contact";
-    title.innerText = "Classic Burgers";
-    description.innerText =
-      "This is the place to visit when you want some good ass burgers!";
-    burgerPicture.src = Burger;
 
     navigation.appendChild(homeLink);
     navigation.appendChild(menuLink);
     navigation.appendChild(contactLink);
-
-    main.appendChild(title);
-    main.appendChild(burgerPicture);
-    main.appendChild(description);
 
     return [navigation, main, footer];
   };
@@ -57,6 +43,7 @@ const page = (() => {
   const load = () => {
     const elementsArray = _createElements();
     elementsArray.forEach((element) => _root.appendChild(element));
+    home.load();
   };
 
   return {

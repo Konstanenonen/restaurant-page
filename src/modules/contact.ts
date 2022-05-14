@@ -24,8 +24,7 @@ const contact = (() => {
   const load = () => {
     const root = _getRoot();
     root.innerHTML = "";
-    const content = _createContactContent();
-    root.appendChild(content);
+    root.appendChild(_createContactContent());
   };
 
   return {
