@@ -31,8 +31,7 @@ const home = (() => {
   const load = () => {
     const root = _getRoot();
     root.innerHTML = "";
-    const content = _createHomeContent();
-    root.appendChild(content);
+    root.appendChild(_createHomeContent());
   };
 
   return {
