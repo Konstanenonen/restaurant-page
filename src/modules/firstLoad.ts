@@ -1,3 +1,5 @@
+import Burger from './burger.jpg';
+
 const page = (() => {
   const _root = document.getElementById("content");
 
@@ -7,6 +9,8 @@ const page = (() => {
     const footer = document.createElement("footer");
     const title = document.createElement("h1");
     const description = document.createElement("p");
+    const burgerPicture = new Image();
+    burgerPicture.src = Burger;
 
     title.innerText = "Classic Burgers";
     description.innerText = "This is the place to visit when you want some good ass burgers!"
