@@ -1,4 +1,4 @@
-import Burger from '../images/burger.jpg';
+import Burger from "../images/burger.jpg";
 
 const page = (() => {
   const _root = document.getElementById("content");
@@ -6,6 +6,15 @@ const page = (() => {
   const _createElements = () => {
     const navigation = document.createElement("nav");
     navigation.classList.add("navigation");
+
+    const homeLink = document.createElement("button");
+    homeLink.classList.add("navigation-button");
+
+    const menuLink = document.createElement("button");
+    menuLink.classList.add("navigation-button");
+
+    const contactLink = document.createElement("button");
+    contactLink.classList.add("navigation-button");
 
     const main = document.createElement("main");
     main.classList.add("main");
@@ -22,21 +31,24 @@ const page = (() => {
     const burgerPicture = new Image();
     burgerPicture.classList.add("header-image");
 
+    homeLink.innerText = "Home";
+    menuLink.innerText = "Menu";
+    contactLink.innerText = "Contact";
     title.innerText = "Classic Burgers";
-    description.innerText = "This is the place to visit when you want some good ass burgers!"
+    description.innerText =
+      "This is the place to visit when you want some good ass burgers!";
     burgerPicture.src = Burger;
 
+    navigation.appendChild(homeLink);
+    navigation.appendChild(menuLink);
+    navigation.appendChild(contactLink);
 
     main.appendChild(title);
     main.appendChild(burgerPicture);
     main.appendChild(description);
 
-    return [
-      navigation,
-      main,
-      footer,
-    ];
-  }
+    return [navigation, main, footer];
+  };
 
   const load = () => {
     const elementsArray = _createElements();
@@ -45,7 +57,7 @@ const page = (() => {
 
   return {
     load,
-  }
+  };
 })();
 
 export default page;

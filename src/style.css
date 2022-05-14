@@ -17,3 +17,11 @@
   max-width: 400px;
   height: auto;
 }
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
