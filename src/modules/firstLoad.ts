@@ -1,6 +1,6 @@
 import home from "./home";
 
-const page = (() => {
+const page = ((initialMainContent) => {
   const _root = document.getElementById("content");
 
   const _createElements = () => {
@@ -43,12 +43,12 @@ const page = (() => {
   const load = () => {
     const elementsArray = _createElements();
     elementsArray.forEach((element) => _root.appendChild(element));
-    home.load();
+    initialMainContent.load();
   };
 
   return {
     load,
   };
-})();
+})(home);
 
 export default page;
