@@ -4,6 +4,7 @@
 
 body {
   background-color: rgb(254, 248, 238);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .main-content {
@@ -21,6 +22,7 @@ body {
 .header-image {
   max-width: 300px;
   height: auto;
+  border: 3px solid black; 
 }
 
 .navigation {
@@ -59,4 +61,21 @@ body {
 .footer-text {
   border: 1px solid white;
   padding: 10px;
+}
+
+.description {
+  font-size: 1.5rem;
+}
+
+.open-hours {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.open-hours > li {
+  color: white;
+  font-size: 1.3rem;
 }
