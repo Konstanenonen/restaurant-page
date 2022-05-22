@@ -8,9 +8,9 @@ const menu = (() => {
   }
 
   const _menuArray = [
-    {name: "Big Burger", pic: Burger},
-    {name: "Classic Burger", pic: Burger2},
-    {name: "Cool Burger", pic: Burger3}
+    {name: "Big Burger", text: "price: 10 €", pic: Burger},
+    {name: "Classic Burger", text: "price: 11 €", pic: Burger2},
+    {name: "Cool Burger", text: "price: 10,5 €", pic: Burger3}
   ];
 
   const _createMenuContent = () => {
@@ -34,8 +34,13 @@ const menu = (() => {
       title.classList.add("card-title");
       title.innerText = item.name;
 
+      const text = document.createElement("p");
+      text.classList.add("card-text");
+      text.innerText = item.text;
+
       menuCard.appendChild(title);
       menuCard.appendChild(burgerPicture);
+      menuCard.appendChild(text);
 
       return menuCard;
     });
