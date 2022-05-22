@@ -2,9 +2,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   background-color: rgb(254, 248, 238);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
 }
 
 .main-content {
@@ -52,9 +70,6 @@ body {
   background-color: black;
   display: flex;
   place-content: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   padding: 10px;
 }
 
@@ -78,4 +93,19 @@ body {
 .open-hours > li {
   color: white;
   font-size: 1.3rem;
+}
+
+.card {
+  border: 2px solid black;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  color: white;
+  background-color: black;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
 }
