@@ -1,19 +1,20 @@
 import Burger from '../images/burger.jpg';
 import Burger2 from '../images/burger2.jpg';
 import Burger3 from '../images/burger3.jpg';
+import { Card } from '../../types';
 
 const menu = (() => {
-  const _getRoot = () => {
+  const _getRoot = (): HTMLElement => {
     return document.getElementById("main");
   }
 
-  const _menuArray = [
+  const _menuArray: Card[] = [
     {name: "Big Burger", text: "price: 10 €", pic: Burger},
     {name: "Classic Burger", text: "price: 11 €", pic: Burger2},
-    {name: "Cool Burger", text: "price: 10,5 €", pic: Burger3}
+    {name: "Cool Burger", text: "price: 10,5 €", pic: Burger3},
   ];
 
-  const _createMenuContent = () => {
+  const _createMenuContent = (): HTMLDivElement => {
     const title = document.createElement("h1");
     title.classList.add("title");
     title.innerText = "Menu";
@@ -54,7 +55,7 @@ const menu = (() => {
     return parentDiv;
   };
 
-  const load = () => {
+  const load = (): void => {
     const root = _getRoot();
     root.innerHTML = "";
     root.appendChild(_createMenuContent());

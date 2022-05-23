@@ -1,11 +1,11 @@
 import Chef from '../images/chef.jpg';
 
 const contact = (() => {
-  const _getRoot = () => {
+  const _getRoot = (): HTMLElement => {
     return document.getElementById("main");
   };
 
-  const _createContactContent = () => {
+  const _createContactContent = (): HTMLDivElement => {
     const title = document.createElement("h1");
     title.classList.add("title");
     title.innerText = "Contact Us";
@@ -42,7 +42,7 @@ const contact = (() => {
     return parentDiv;
   };
 
-  const load = () => {
+  const load = (): void => {
     const root = _getRoot();
     root.innerHTML = "";
     root.appendChild(_createContactContent());

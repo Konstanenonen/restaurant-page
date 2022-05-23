@@ -1,9 +1,9 @@
 import home from "./home";
 
 const page = ((initialMainContent) => {
-  const _root = document.getElementById("content");
+  const _root: HTMLElement = document.getElementById("content");
 
-  const _createElements = () => {
+  const _createElements = (): HTMLElement[] => {
     const homeLink = document.createElement("button");
     homeLink.classList.add("navigation-button");
     homeLink.id = "home-button";
@@ -40,7 +40,7 @@ const page = ((initialMainContent) => {
     return [navigation, main, footer];
   };
 
-  const load = () => {
+  const load = (): void => {
     const elementsArray = _createElements();
     elementsArray.forEach((element) => _root.appendChild(element));
     initialMainContent.load();

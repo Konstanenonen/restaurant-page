@@ -1,11 +1,11 @@
 import Burger from "../images/burger.jpg";
 
 const home = (() => {
-  const _getRoot = () => {
+  const _getRoot = (): HTMLElement => {
     return document.getElementById("main");
   }
 
-  const _createHomeContent = () => {
+  const _createHomeContent = (): HTMLDivElement => {
     const title = document.createElement("h1");
     title.classList.add("title");
     title.innerText = "Classic Burgers";
@@ -54,7 +54,7 @@ const home = (() => {
     return parentDiv;
   };
 
-  const load = () => {
+  const load = (): void => {
     const root = _getRoot();
     root.innerHTML = "";
     root.appendChild(_createHomeContent());
